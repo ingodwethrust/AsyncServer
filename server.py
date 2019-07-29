@@ -10,4 +10,4 @@ app = Sanic()
         return text("Hello")
     
 if __name__ == "main":
-    app.run(host="0.0.0.0", port=80000)
+    app.run(host="0.0.0.0", port=8000)
