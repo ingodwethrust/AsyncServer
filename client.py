@@ -32,12 +32,11 @@ def make_request():
 	resp = sock.recv(100)
 	sock.close()
 	
-def requesting():	
+def run_queries_produser():	
 	while True:
-		make_request()
+		tasks.append(make_request())
+		time.sleep(1.0)
 
-t1 = Thread(target = requesting)
-t2 = Thread(target = requesting)
+t1 = Thread(target = run_queries_produser)
 
 t1.start()
-t2.start()
